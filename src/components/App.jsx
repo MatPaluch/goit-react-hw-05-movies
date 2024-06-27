@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/goit-react-hw-05-movies" element={<SharedLayout />}>
+        <Route path="/goit-react-hw-05-movies/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="/goit-react-hw-05-movies/movies" element={<Movies />} />
           <Route
