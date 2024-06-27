@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/goit-react-hw-05-movies/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="/goit-react-hw-05-movies/movies" element={<Movies />} />
+          <Route path="/goit-react-hw-05-movies/movies/" element={<Movies />} />
           <Route
-            path="/goit-react-hw-05-movies/movies/:id"
+            path="/goit-react-hw-05-movies/movies/:id/"
             element={<MoviesDetails />}>
             <Route path="cast" element={<Cast />}></Route>
             <Route path="reviews" element={<Reviews />}></Route>
