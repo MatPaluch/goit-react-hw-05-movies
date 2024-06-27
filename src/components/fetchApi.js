@@ -24,3 +24,10 @@ export const fetchDetails = async (movie_id) => {
     options,
   );
 };
+
+export const fetchCredits = async (movie_id) => {
+  return await axios.get(
+    `https://api.themoviedb.org/3/movie/${movie_id}/credits`,
+    options,
+  );
+};

@@ -51,6 +51,7 @@ const MoviesDetails = () => {
               </li>
             </ul>
           </div>
+          <hr></hr>
           <Outlet></Outlet>
         </main>
       )}
