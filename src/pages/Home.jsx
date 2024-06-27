@@ -22,7 +22,9 @@ const Home = () => {
           {data
             ? data.map((obj) => (
                 <li key={obj.id}>
-                  <NavLink to={`/movies/${obj.id}`}>{obj.title}</NavLink>
+                  <NavLink to={`/goit-react-hw-05-movies/movies/${obj.id}`}>
+                    {obj.title}
+                  </NavLink>
                 </li>
               ))
             : false}

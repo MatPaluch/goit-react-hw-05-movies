@@ -5,10 +5,10 @@ const SharedLayout = () => {
     <>
       <header>
         <nav>
-          <NavLink to="/" end>
+          <NavLink to="/goit-react-hw-05-movies/movies" end>
             Home
           </NavLink>
-          <NavLink to="/movies">Movie</NavLink>
+          <NavLink to="/goit-react-hw-05-movies/movies">Movie</NavLink>
         </nav>
       </header>
       <Outlet></Outlet>
