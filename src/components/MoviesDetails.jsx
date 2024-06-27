@@ -40,10 +40,14 @@ const MoviesDetails = () => {
             <h3>Additional information</h3>
             <ul>
               <li>
-                <Link to={`/movies/${id}/cast`}>Cast</Link>
+                <Link to={`/goit-react-hw-05-movies/movies/${id}/cast`}>
+                  Cast
+                </Link>
               </li>
               <li>
-                <Link to={`/movies/${id}/reviews`}>Reviews</Link>
+                <Link to={`/goit-react-hw-05-movies/movies/${id}/reviews`}>
+                  Reviews
+                </Link>
               </li>
             </ul>
           </div>
