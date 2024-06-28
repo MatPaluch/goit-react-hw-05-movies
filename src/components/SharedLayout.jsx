@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
-import "./css/SharedLayout.css";
+
 const SharedLayout = () => {
   return (
     <>

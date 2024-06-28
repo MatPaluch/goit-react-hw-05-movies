@@ -1,11 +1,20 @@
 import { useEffect, useState } from "react";
-import { useParams, Link, Outlet } from "react-router-dom";
+import {
+  useParams,
+  Link,
+  Outlet,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 import { fetchDetails } from "./fetchApi";
 
 import Style from "./css/MoviesDetails.module.css";
 
 const MoviesDetails = () => {
   const { id } = useParams();
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [movieData, setMovieData] = useState();
 
@@ -20,7 +29,12 @@ const MoviesDetails = () => {
     <>
       {movieData && (
         <main>
-          <button>← Go Back</button>
+          <button
+            onClick={() => {
+              navigate(location.state?.from ?? "/goit-react-hw-05-movies");
+            }}>
+            ← Go Back
+          </button>
           <div className={Style.card}>
             <div>
               <img

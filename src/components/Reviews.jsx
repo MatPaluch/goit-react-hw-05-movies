@@ -11,11 +11,11 @@ const Reviews = () => {
       await fetchReviews(id).then((res) => setReview(res.data.results));
     };
     fetch();
-  });
+  }, []);
 
   return (
     <>
-      {review &&
+      {review?.length > 1 ? (
         review.map((review) => {
           return (
             <ul key={review.id}>
@@ -25,7 +25,10 @@ const Reviews = () => {
               </li>
             </ul>
           );
-        })}
+        })
+      ) : (
+        <p>There is no reviews at this moment</p>
+      )}
     </>
   );
 };

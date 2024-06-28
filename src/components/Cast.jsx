@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
 import { fetchCredits } from "./fetchApi";
 
 const Cast = () => {
@@ -17,12 +17,19 @@ const Cast = () => {
     fetch();
   }, []);
 
+  const [searchParams] = useSearchParams();
+  const params = useMemo(
+    () => Object.fromEntries([...searchParams]),
+    [searchParams],
+  );
+  const { name, maxPrice, inStock } = params;
+
   return (
     <ul>
       {credits &&
         credits.map((actors) => {
           return (
-            <div key={actors.id}>
+            <div key={actors.id} className=".actor_card">
               <img
                 src={`https://image.tmdb.org/t/p/w185/${actors.profile_path}`}
                 alt="Actor_profile"></img>
