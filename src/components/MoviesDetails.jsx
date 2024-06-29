@@ -31,7 +31,7 @@ const MoviesDetails = () => {
         <main>
           <button
             onClick={() => {
-              navigate(location.state?.from ?? "/goit-react-hw-05-movies");
+              navigate(location.state.from);
             }}>
             ← Go Back
           </button>
@@ -54,12 +54,16 @@ const MoviesDetails = () => {
             <h3>Additional information</h3>
             <ul>
               <li>
-                <Link to={`/goit-react-hw-05-movies/movies/${id}/cast`}>
+                <Link
+                  to={`/goit-react-hw-05-movies/movies/${id}/cast`}
+                  state={{ from: location.state.from }}>
                   Cast
                 </Link>
               </li>
               <li>
-                <Link to={`/goit-react-hw-05-movies/movies/${id}/reviews`}>
+                <Link
+                  to={`/goit-react-hw-05-movies/movies/${id}/reviews`}
+                  state={{ from: location.state.from }}>
                   Reviews
                 </Link>
               </li>

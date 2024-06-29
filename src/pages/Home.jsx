@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchData() {
       const response = await fetchMovies();
-      console.log(response.data.results);
+
       setData(response.data.results);
     }
     fetchData();

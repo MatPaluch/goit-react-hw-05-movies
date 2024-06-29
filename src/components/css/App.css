@@ -14,9 +14,11 @@ nav {
 main {
   padding: 10px;
 }
+nav > a {
+  padding: 10px 20px;
+}
 a {
   text-decoration: none;
-  padding: 10px 20px;
   color: black;
 }
 
